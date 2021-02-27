@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`the doodle function should render a doodle correctly 1`] = `
+<css-doodle>
+  
+      :doodle {
+        @grid: 2 / 200px;
+        grid-gap: 1px;
+      }
+    
+</css-doodle>
+`;
