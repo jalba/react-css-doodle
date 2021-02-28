@@ -3,7 +3,7 @@ import { BasicTypes } from '../lib/types';
 
 type Renderer = ReactTestRendererJSON | ReactTestRendererJSON[] | null;
 
-function isRenderer(arg: A | B | C): arg is ReactTestRendererJSON {
+function isRenderer(arg: Renderer): arg is ReactTestRendererJSON {
   return (<ReactTestRendererJSON>arg).children !== undefined;
 }
 
