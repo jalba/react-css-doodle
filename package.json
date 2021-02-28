@@ -1,7 +1,7 @@
 {
   "name": "@jalba/react-css-doodle",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
   "author": "Javier Alba",
   "license": "MIT",
   "main": "dist/index.cjs.js",
