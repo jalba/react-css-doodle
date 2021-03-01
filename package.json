@@ -3,6 +3,12 @@
   "version": "0.1.0",
   "private": false,
   "author": "Javier Alba",
+  "homepage": "https://github.com/jalba/react-css-doodle#readme",
+  "keywords": [
+    "react",
+    "css-doodle",
+    "styled-components"    
+  ],
   "license": "MIT",
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",
