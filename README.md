@@ -8,7 +8,7 @@ A simple [styled-components](https://styled-components.com/)-esque wrapper for [
 
 ## usage
 
-You can pass variables and even functions to the (tagged template literal)[https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals#tagged_templates] to build your doodle's rules:
+You can pass variables and even functions to the [tagged template literal](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals#tagged_templates) to build your doodle's rules:
 
 ```javascript
 import React from "react";
