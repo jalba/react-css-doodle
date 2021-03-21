@@ -1,4 +1,4 @@
-import React, { MutableRefObject } from 'react';
+import React, { RefObject } from 'react';
 import 'css-doodle';
 
 import { DoodleHTMLElement } from './types';
@@ -8,7 +8,7 @@ interface DoodleBaseProps {
   use?: string;
   grid?: string;
   seed?: string;
-  ref?: MutableRefObject<DoodleHTMLElement>;
+  ref?: RefObject<DoodleHTMLElement>;
 }
 
 type MergeElementProps<

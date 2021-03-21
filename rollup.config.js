@@ -7,7 +7,7 @@ const config = [
     input: 'src/index.ts',
     output: [
       { file: pkg.main, format: 'cjs' },
-      { file: pkg.module, format: 'esm' },
+      { file: pkg.module, format: 'esm' }
     ],
     plugins: [
       del({ targets: ['dist/*'] }),
@@ -17,7 +17,7 @@ const config = [
       })
     ],
     external: Object.keys(pkg.peerDependencies || {})
-  },
+  }
 ];
 
 export default config;

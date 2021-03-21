@@ -1,4 +1,4 @@
-import React, { MutableRefObject, useRef } from 'react';
+import React, { RefObject, useRef } from 'react';
 import { Story, Meta } from '@storybook/react/types-6-0';
 
 import doodle from '../lib';
@@ -10,7 +10,7 @@ type WrapperProps = {
   columns?: number;
   gridSize?: number;
   gridGap: number;
-  innerRef?: MutableRefObject<DoodleHTMLElement>;
+  innerRef?: RefObject<DoodleHTMLElement>;
   grid?: string;
   seed?: string;
 };
@@ -46,7 +46,7 @@ DoodleWithControls.args = {
 };
 
 export const DoodleWitRefs: Story<WrapperProps> = args => {
-  const ref = useRef<DoodleHTMLElement>() as MutableRefObject<DoodleHTMLElement>;
+  const ref = useRef<DoodleHTMLElement>(null);
   const handleClick = async () => {
     await ref.current?.export({
       scale: 6,
