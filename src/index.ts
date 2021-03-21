@@ -1,4 +1,4 @@
-export { default as doodle } from './lib';
+export { default } from './lib';
 
 import type {
   DoodleHTMLElement,
