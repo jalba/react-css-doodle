@@ -1,6 +1,6 @@
 import React from 'react';
 
-import DoodleComponent from '../components/doodle-component';
+import DoodleComponent, { DoodleProps } from '../components/doodle-component';
 
 import { Vars } from './types';
 import { valueToString } from '../utils';
@@ -8,12 +8,14 @@ import { valueToString } from '../utils';
 export default function doodle(
   stringArray: TemplateStringsArray,
   ...vars: Vars[]
-): () => JSX.Element {
+): (props: DoodleProps) => JSX.Element {
   const computedRules: string = stringArray
     .map((str, idx) => `${str}${vars[idx] ? valueToString(vars[idx]) : ''}`)
     .join('');
 
-  const Doodle = () => <DoodleComponent rules={computedRules} />;
+  const Doodle = (props: DoodleProps) => (
+    <DoodleComponent {...props} rules={computedRules} />
+  );
 
   return Doodle;
 }

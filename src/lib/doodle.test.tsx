@@ -51,10 +51,13 @@ describe('the doodle function', () => {
     const stringJson = renderer.create(<GridString />).toJSON();
     const templateJson = renderer.create(<GridTemplate />).toJSON();
     const functionJson = renderer.create(<GridFunction />).toJSON();
+    const strNumberTest = `@grid: ${dimension} / 200px;`;
+    const strStringTest = `background: ${str};`;
+    const strFunctionTest = `@grid: ${dimension * dimension} / 200px;`;
 
-    expect(findInChildren(numberJson, dimension)).toEqual(true);
-    expect(findInChildren(stringJson, str)).toEqual(true);
-    expect(findInChildren(templateJson, str)).toEqual(true);
-    expect(findInChildren(functionJson, dimension * dimension)).toEqual(true);
+    expect(findInChildren(numberJson, strNumberTest)).toEqual(true);
+    expect(findInChildren(stringJson, strStringTest)).toEqual(true);
+    expect(findInChildren(templateJson, template)).toEqual(true);
+    expect(findInChildren(functionJson, strFunctionTest)).toEqual(true);
   });
 });

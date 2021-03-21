@@ -1,10 +1,31 @@
-import React from 'react';
+import React, { MutableRefObject } from 'react';
 import 'css-doodle';
 
-import './doodle-declaration';
+import { DoodleHTMLElement } from './types';
 
-const DoodleComponent: React.FC<{ rules: string }> = ({ rules }) => {
-  return <css-doodle>{rules}</css-doodle>;
-};
+interface DoodleBaseProps {
+  rules?: string;
+  use?: string;
+  grid?: string;
+  seed?: string;
+  ref?: MutableRefObject<DoodleHTMLElement>;
+}
+
+type MergeElementProps<
+  T extends React.ElementType,
+  P extends DoodleBaseProps
+> = Omit<React.ComponentPropsWithRef<T>, keyof P> & P;
+
+export type DoodleProps = MergeElementProps<'div', DoodleBaseProps>;
+
+const DoodleComponent = React.forwardRef<DoodleHTMLElement, DoodleProps>(
+  function DoodleComponent({ rules, ...otherProps }, forwardRef) {
+    return (
+      <css-doodle ref={forwardRef} {...otherProps}>
+        {rules}
+      </css-doodle>
+    );
+  }
+);
 
 export default DoodleComponent;

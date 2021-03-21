@@ -7,7 +7,7 @@
   "keywords": [
     "react",
     "css-doodle",
-    "styled-components"    
+    "styled-components"
   ],
   "license": "MIT",
   "main": "dist/index.cjs.js",
@@ -18,7 +18,7 @@
   "bugs": {
     "url": "https://github.com/jalba/react-css-doodle/issues"
   },
-  "typings": "dist/index.d.ts",
+  "types": "dist/index.d.ts",
   "dependencies": {
     "css-doodle": "^0.14.2"
   },
@@ -68,6 +68,8 @@
     "@storybook/addon-essentials": "^6.1.20",
     "@storybook/addon-links": "^6.1.20",
     "@storybook/react": "^6.1.20",
+    "@testing-library/jest-dom": "^5.11.9",
+    "@testing-library/react": "^11.2.5",
     "@types/jest": "^26.0.15",
     "@types/node": "^12.0.0",
     "@types/react": "^17.0.0",

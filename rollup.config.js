@@ -9,8 +9,14 @@ const config = [
       { file: pkg.main, format: 'cjs' },
       { file: pkg.module, format: 'esm' },
     ],
-    plugins: [del({ targets: ["dist/*"] }), typescript()],
-    external: Object.keys(pkg.peerDependencies || {}),
+    plugins: [
+      del({ targets: ['dist/*'] }),
+      typescript({
+        tsconfig: './tsconfig.json',
+        useTsconfigDeclarationDir: true
+      })
+    ],
+    external: Object.keys(pkg.peerDependencies || {})
   },
 ];
 
