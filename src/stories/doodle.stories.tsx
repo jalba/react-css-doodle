@@ -57,7 +57,7 @@ export const DoodleWitRefs: Story<WrapperProps> = args => {
     <React.Fragment>
       <Wrapper {...args} innerRef={ref} />
       <div style={{ fontFamily: 'sans-serif' }}>
-        <p>Passing a ref to the Doodle Element:</p>
+        <p>Passing a ref as an innerRef prop to the Doodle Element:</p>
         <div
           style={{
             marginTop: '20px'
