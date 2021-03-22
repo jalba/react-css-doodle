@@ -1,7 +1,7 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
 
-import { findInChildren } from '../utils';
+import { findInChildren } from '../test-utils';
 
 import doodle from './doodle';
 

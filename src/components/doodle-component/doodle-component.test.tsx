@@ -2,7 +2,7 @@ import React, { MutableRefObject, createRef } from 'react';
 import { render } from '@testing-library/react';
 import '@testing-library/jest-dom';
 
-import { getByTextContent } from '../../utils';
+import { getByTextContent } from '../../test-utils';
 
 import DoodleComponent from './doodle-component';
 import { DoodleHTMLElement } from './types';

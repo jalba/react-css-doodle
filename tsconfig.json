@@ -25,5 +25,10 @@
   },
   "include": [
     "src"
+  ],
+  "exclude": [
+    "src/**/*.tes.tsx",
+    "./node_modules",
+    "./src/test-utils"
   ]
 }
