@@ -31,7 +31,7 @@ const Wrapper: React.FC<WrapperProps> = ({
     background: ${backgroundColor};
   `;
 
-  return <Doodle ref={innerRef} />;
+  return <Doodle innerRef={innerRef} />;
 };
 
 export const DoodleWithControls: Story<WrapperProps> = args => (
@@ -46,7 +46,7 @@ DoodleWithControls.args = {
 };
 
 export const DoodleWitRefs: Story<WrapperProps> = args => {
-  const ref = useRef<DoodleHTMLElement>(null);
+  const ref = React.createRef<DoodleHTMLElement>();
   const handleClick = async () => {
     await ref.current?.export({
       scale: 6,

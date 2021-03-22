@@ -59,7 +59,12 @@ describe('Doodle component', () => {
     const useStr = 'var(--test)';
 
     render(
-      <DoodleComponent rules={rules} ref={ref} use={useStr} seed={'2021'} />
+      <DoodleComponent
+        rules={rules}
+        innerRef={ref}
+        use={useStr}
+        seed={'2021'}
+      />
     );
     expect(ref.current.export).toBeDefined();
     expect(ref.current.grid).toMatchObject(gridValue);
